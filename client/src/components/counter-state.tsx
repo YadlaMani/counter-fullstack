@@ -35,7 +35,12 @@ const CounterState = () => {
       connection.removeAccountChangeListener(subscriptionId);
     };
   }, [program, counterPDA, connection]);
-  return <p className="text-lg">Count: {counterData?.count?.toString()}</p>;
+  return (
+    <div>
+      <h1>Counter State</h1>
+      <p className="text-lg">Count: {counterData?.count?.toString()}</p>{" "}
+    </div>
+  );
 };
 
 export default CounterState;
